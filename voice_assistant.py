@@ -1,12 +1,12 @@
 import speech_recognition as sr
-from google_ai_api import ask_google_ai  # import your Google API wrapper
+from google_ai_api import ask_google_ai
 
 class VoiceAssistant:
     def __init__(self, language="mn-MN"):
         self.recognizer = sr.Recognizer()
         self.language = language
-        self.commands_map = {}  # keyword -> function
-        self.ai_keyword = "хосоо"  # special trigger word
+        self.commands_map = {}
+        self.ai_keyword = "соло "
 
     def add_command(self, keyword, function):
         self.commands_map[keyword.lower()] = function
